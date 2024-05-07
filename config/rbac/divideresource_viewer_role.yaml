@@ -1,0 +1,23 @@
+# permissions for end users to view divideresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: k8-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: divideresource-viewer-role
+rules:
+- apiGroups:
+  - division.division.io
+  resources:
+  - divideresources
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - division.division.io
+  resources:
+  - divideresources/status
+  verbs:
+  - get

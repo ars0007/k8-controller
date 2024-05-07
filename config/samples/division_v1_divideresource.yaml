@@ -1,0 +1,9 @@
+apiVersion: division.division.io/v1
+kind: DivideResource
+metadata:
+  labels:
+    app.kubernetes.io/name: k8-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: divideresource-sample
+spec:
+  # TODO(user): Add fields here

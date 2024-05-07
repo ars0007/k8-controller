@@ -1,0 +1,7 @@
+apiVersion: division.division.io/v1
+kind: DivideResource
+metadata:
+  name: divide-sample
+spec:
+  numberOne: 50
+  numberTwo: 10

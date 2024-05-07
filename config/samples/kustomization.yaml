@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- division_v1_divideresource.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,27 @@
+# permissions for end users to edit divideresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: k8-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: divideresource-editor-role
+rules:
+- apiGroups:
+  - division.division.io
+  resources:
+  - divideresources
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - division.division.io
+  resources:
+  - divideresources/status
+  verbs:
+  - get
